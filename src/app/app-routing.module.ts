@@ -10,6 +10,7 @@ import { FactCheckComponent } from './views/fact-check/fact-check.component';
 import { UrlToSeoArticleComponent } from './views/seo/url-to-seo-article/url-to-seo-article.component';
 import { KeywordToSeoArticleComponent} from './views/seo/keyword-to-seo-article/keyword-to-seo-article.component';
 import { HomeComponent } from './views/pages/home/home.component';
+import { TextToSqlComponent } from './views/developer/text-to-sql/text-to-sql.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,7 @@ const routes: Routes = [
     path: '',
     component: DefaultLayoutComponent,
     data: {
-      title: 'Home'
+      title: 'Inicio'
     },
     children: [
       {
@@ -33,7 +34,7 @@ const routes: Routes = [
         path: 'fact-check',
         component: FactCheckComponent,
         data: {
-          title: 'True or False Fact-Check Trivial'
+          title: 'Fact-Check verdadero/falso'
         }
       },
       {
@@ -48,6 +49,13 @@ const routes: Routes = [
         component: KeywordToSeoArticleComponent,
         data: {
           title: 'Keyword to seo article'
+        }
+      },
+      {
+        path: 'text-to-sql',
+        component: TextToSqlComponent,
+        data: {
+          title: 'Text to sql query'
         }
       },
       //TODO: arregla el lazy load de los componentes de SEO

@@ -3,16 +3,16 @@
       <div class="col-md-6 offset-md-3">
         <!-- Utiliza *ngIf para controlar la visibilidad del contenido -->
         <div *ngIf="!isLoading">
-        <!--<h4 class="text-left">Verdadero o falso Fact-Check</h4>-->
+        <h4 class="text-left">Traductor de texto a sql</h4>
         
           <div class="form-group">
-            <input type="text" class="form-control" #textInput placeholder="Haz una pregunta...">
+            <input type="text" class="form-control" #textInput placeholder="Texto...">
           </div>
-          <button class="mt-3 btn btn-primary" (click)="onSubmit(textInput)">Fact check</button>
+          <button class="mt-3 btn btn-primary" (click)="onSubmit(textInput)">Traduce</button>
           <div class="mt-3">
-            <h4>Resultado:</h4>
+            <h3>Resultado:</h3>
            <!-- Mostrar el resultado animado letra por letra -->
-          <h5 class="animated-text">{{ animatedResult }}</h5>
+          <p>{{ result }}</p>
           </div>
         </div>
   

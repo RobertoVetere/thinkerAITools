@@ -11,6 +11,15 @@ export const navItems: INavData[] = [
     //}
   },
   {
+    name: 'AI Text Editor',
+    url: '/thinker-text-editor',
+    iconComponent: { name: 'cil-pen' },
+    badge: {
+      color: 'info',
+      text: 'NEW'
+    }
+  },
+  {
     name: 'True or False Fact-check',
     url: '/fact-check',
     iconComponent: { name: 'cil-check' }
@@ -35,6 +44,17 @@ export const navItems: INavData[] = [
         {
           name: 'Keyword to SEO Article',
           url: '/keyword-to-seo-article'
+        },
+      ]
+  },
+  {
+    name: 'AI Developer Assistant',
+    url: '/text-to-sql',
+    iconComponent: { name: 'cil-code' },
+      children: [
+        {
+          name: 'Text to SQL',
+          url: '/text-to-sql'
         },
       ]
   },
