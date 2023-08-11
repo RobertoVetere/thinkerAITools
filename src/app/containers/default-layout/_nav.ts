@@ -11,32 +11,32 @@ export const navItems: INavData[] = [
     //}
   },
   {
+    name: 'True or False Fact-check',
+    url: '/fact-check',
+    iconComponent: { name: 'cil-check' }
+    
+  },
+  {
     name: 'Tools',
     title: true
   },
   {
-    name: 'Seo',
-    url: '/widgets',
+    name: 'AI Seo Assistant',
+    url: '/url-to-seo-article',
     iconComponent: { name: 'cil-notes' },
     badge: {
       color: 'info',
       text: 'NEW'},
       children: [
         {
-          name: 'URL to Article',
-          url: '/notifications/alerts'
+          name: 'URL to SEO Article',
+          url: '/url-to-seo-article'
         },
         {
-          name: 'Keyword to Article',
-          url: '/notifications/badges'
+          name: 'Keyword to SEO Article',
+          url: '/keyword-to-seo-article'
         },
       ]
-  },
-  {
-    name: 'True or False Fact-check',
-    url: '/charts',
-    iconComponent: { name: 'cil-check' }
-    
   },
   /*
   {

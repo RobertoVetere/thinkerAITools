@@ -3,6 +3,8 @@ import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@a
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxTypedJsModule } from 'ngx-typed-js'; 
 
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
@@ -37,7 +39,6 @@ import {
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
-import { SeoComponent } from './views/seo/seo.component';
 import { FactCheckComponent } from './views/fact-check/fact-check.component';
 
 const APP_CONTAINERS = [
@@ -47,7 +48,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, SeoComponent, FactCheckComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, FactCheckComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -74,7 +75,9 @@ const APP_CONTAINERS = [
     BadgeModule,
     ListGroupModule,
     CardModule,
-    NgScrollbarModule
+    NgScrollbarModule,
+    HttpClientModule,
+    NgxTypedJsModule
   ],
   providers: [
     {

@@ -1,1 +1,26 @@
-<p>fact-check works!</p>
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <!-- Utiliza *ngIf para controlar la visibilidad del contenido -->
+        <div *ngIf="!isLoading">
+        <h4 class="text-left">True or False Fact-Check</h4>
+        
+          <div class="form-group">
+            <input type="text" class="form-control" #textInput placeholder="Texto...">
+          </div>
+          <button class="mt-3 btn btn-primary" (click)="onSubmit(textInput)">Fact check</button>
+          <div class="mt-3">
+            <h3>Resultado:</h3>
+           <!-- Mostrar el resultado animado letra por letra -->
+          <h4 class="animated-text">{{ animatedResult }}</h4>
+          </div>
+        </div>
+  
+        <!-- Muestra la animación de carga si isLoading es true -->
+        <div *ngIf="isLoading" class="fade show" style="text-align: center; padding-top: calc(100vh / 2); height: 100vh">
+          <i class="spinner-grow spinner-grow-sm"></i>
+          <span class="m-1">Cargando...</span> 
+        </div>
+      </div>
+    </div>
+  </div>

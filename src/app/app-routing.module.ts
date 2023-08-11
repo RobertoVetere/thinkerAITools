@@ -6,6 +6,10 @@ import { Page404Component } from './views/pages/page404/page404.component';
 import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
+import { FactCheckComponent } from './views/fact-check/fact-check.component';
+import { UrlToSeoArticleComponent } from './views/seo/url-to-seo-article/url-to-seo-article.component';
+import { KeywordToSeoArticleComponent} from './views/seo/keyword-to-seo-article/keyword-to-seo-article.component';
+import { HomeComponent } from './views/pages/home/home.component';
 
 const routes: Routes = [
   {
@@ -26,10 +30,34 @@ const routes: Routes = [
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
       {
-        path: 'theme',
-        loadChildren: () =>
-          import('./views/theme/theme.module').then((m) => m.ThemeModule)
+        path: 'fact-check',
+        component: FactCheckComponent,
+        data: {
+          title: 'True or False Fact-Check Trivial'
+        }
       },
+      {
+        path: 'url-to-seo-article',
+        component: UrlToSeoArticleComponent,
+        data: {
+          title: 'Url to seo article'
+        }
+      },
+      {
+        path: 'keyword-to-seo-article',
+        component: KeywordToSeoArticleComponent,
+        data: {
+          title: 'Keyword to seo article'
+        }
+      },
+      //TODO: arregla el lazy load de los componentes de SEO
+      /*
+      {
+        path: 'seo',
+        loadChildren: () =>
+          import('./views/seo/seo.module').then((m) => m.SeoModule)
+      },
+      */
       {
         path: 'base',
         loadChildren: () =>
@@ -71,6 +99,13 @@ const routes: Routes = [
           import('./views/pages/pages.module').then((m) => m.PagesModule)
       },
     ]
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+    data: {
+      title: 'Home'
+    }
   },
   {
     path: '404',

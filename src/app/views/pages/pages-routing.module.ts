@@ -4,8 +4,16 @@ import { Page404Component } from './page404/page404.component';
 import { Page500Component } from './page500/page500.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent,
+    data: {
+      title: 'Home'
+    }
+  },
   {
     path: '404',
     component: Page404Component,
