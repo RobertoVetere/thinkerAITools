@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxTypedJsModule } from 'ngx-typed-js'; 
-
+import { QuillModule } from 'ngx-quill'; 
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
 // Import routing module
@@ -35,12 +35,13 @@ import {
   SharedModule,
   SidebarModule,
   TabsModule,
-  UtilitiesModule
+  UtilitiesModule,
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { FactCheckComponent } from './views/fact-check/fact-check.component';
 import { TextToSqlComponent } from './views/developer/text-to-sql/text-to-sql.component';
+import { TextEditorComponent } from './views/text-editor/text-editor.component';
 
 const APP_CONTAINERS = [
   DefaultFooterComponent,
@@ -49,7 +50,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, FactCheckComponent, TextToSqlComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, FactCheckComponent, TextToSqlComponent, TextEditorComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -78,7 +79,9 @@ const APP_CONTAINERS = [
     CardModule,
     NgScrollbarModule,
     HttpClientModule,
-    NgxTypedJsModule
+    NgxTypedJsModule,
+    FormsModule,
+    QuillModule
   ],
   providers: [
     {

@@ -11,6 +11,7 @@ import { UrlToSeoArticleComponent } from './views/seo/url-to-seo-article/url-to-
 import { KeywordToSeoArticleComponent} from './views/seo/keyword-to-seo-article/keyword-to-seo-article.component';
 import { HomeComponent } from './views/pages/home/home.component';
 import { TextToSqlComponent } from './views/developer/text-to-sql/text-to-sql.component';
+import { TextEditorComponent } from './views/text-editor/text-editor.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,13 @@ const routes: Routes = [
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
+      },
+      {
+        path: 'text-editor',
+        component: TextEditorComponent,
+        data: {
+          title: 'Ai text editor'
+        }
       },
       {
         path: 'fact-check',

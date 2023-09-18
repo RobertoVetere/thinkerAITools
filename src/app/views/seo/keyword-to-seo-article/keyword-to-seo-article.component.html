@@ -1,1 +1,27 @@
-<p>keyword-to-seo-article works!</p>
+<div class="container mt-5">
+  <div class="row h-100">
+    <div class="col-md-6 mb-3">
+      <div [hidden]="isLoading">        
+        <div class="form-group">
+          <input type="text" class="form-control" #textInput placeholder="Introduce una keyword...">
+        </div>
+        <button class="mt-3 btn btn-primary" (click)="onSubmit(textInput)">Escribir</button>
+      </div>
+    </div>
+
+    <div [hidden]="isLoading" class="col-md-6">
+      <div class="animated-text-box">
+        <!-- Mostrar el resultado animado letra por letra -->
+        <pre class="animated-text" style="white-space: pre-wrap; overflow-y: auto;">{{ animatedResult }}</pre>
+      </div>
+      <div>
+        <button _ngcontent-ng-c3064881914="" class="mt-3 btn btn-secondary">Guardar</button>
+      </div>
+    </div>
+  </div>
+  <!-- Muestra la animación de carga si isLoading es true -->
+  <div [hidden]="!isLoading" class="fade show" style="text-align: center;">
+    <i class="spinner-grow spinner-grow-sm"></i>
+    <span class="m-1">Cargando...</span> 
+  </div>
+</div>

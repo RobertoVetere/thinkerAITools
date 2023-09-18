@@ -1,0 +1,9 @@
+.animated-text-box {
+    height: 100%;
+    max-height: 100%;
+    background-color: white; /* Fondo blanco */
+    padding: 20px; /* Espacio interno para separar el contenido del borde */
+    border: 1px solid #ccc; /* Borde de 1px con color gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow-y: auto; /* Añade un scroll vertical si el contenido es más largo que la caja */
+  }

@@ -12,7 +12,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'AI Text Editor',
-    url: '/thinker-text-editor',
+    url: '/text-editor',
     iconComponent: { name: 'cil-pen' },
     badge: {
       color: 'info',

@@ -1,0 +1,24 @@
+<!--<app-keyword-to-seo-article></app-keyword-to-seo-article>-->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <form  (ngSubmit)="save(form)" #form="ngForm">
+                <div class="form-group mb-3">
+                    <label>TÍTULO</label>
+                    <input type="text" class="form-control" [(ngModel)]="article.title" name="title">
+                </div>
+
+                <div class="form-group mb-3">
+
+                    <label>TEXTO</label>
+                    <!--<textarea class="form-control" rows="3" [(ngModel)]="article.description" name="description"></textarea>-->
+                    <quill-editor [(ngModel)]="article.description" name="description"></quill-editor>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>
+
