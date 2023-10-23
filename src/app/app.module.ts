@@ -42,6 +42,7 @@ import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { FactCheckComponent } from './views/fact-check/fact-check.component';
 import { TextToSqlComponent } from './views/developer/text-to-sql/text-to-sql.component';
 import { TextEditorComponent } from './views/text-editor/text-editor.component';
+import { RecruitersLandingPageComponent } from './recruiters-landing-page/recruiters-landing-page.component';
 
 const APP_CONTAINERS = [
   DefaultFooterComponent,
@@ -50,7 +51,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, FactCheckComponent, TextToSqlComponent, TextEditorComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, FactCheckComponent, TextToSqlComponent, TextEditorComponent, RecruitersLandingPageComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

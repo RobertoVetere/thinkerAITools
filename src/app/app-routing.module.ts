@@ -12,12 +12,20 @@ import { KeywordToSeoArticleComponent} from './views/seo/keyword-to-seo-article/
 import { HomeComponent } from './views/pages/home/home.component';
 import { TextToSqlComponent } from './views/developer/text-to-sql/text-to-sql.component';
 import { TextEditorComponent } from './views/text-editor/text-editor.component';
+import { RecruitersLandingPageComponent} from './recruiters-landing-page/recruiters-landing-page.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'inicio',
     redirectTo: 'dashboard',
     pathMatch: 'full'
+  },
+  {
+    path: '',
+    component: RecruitersLandingPageComponent, // Reemplaza con el nombre de tu componente de página de inicio
+    data: {
+    title: 'Página de inicio'
+          }
   },
   {
     path: '',
@@ -26,6 +34,7 @@ const routes: Routes = [
       title: 'Inicio'
     },
     children: [
+      
       {
         path: 'dashboard',
         loadChildren: () =>
